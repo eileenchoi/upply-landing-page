@@ -19,7 +19,7 @@ get_header();
             </div>
         </div>
         <div class="content image-container">
-            <img src="<?php the_field('image'); ?>" alt="">
+            <img class="iso" src="<?php the_field('image'); ?>" alt="">
         </div>
     </div>
 

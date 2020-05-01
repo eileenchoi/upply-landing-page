@@ -6,6 +6,29 @@ main{
         align-items: center;
         padding: 0rem 5rem;
 
+        @media only screen and (max-width: $tablet-landscape) {
+            padding: 0rem 3rem;
+            align-items: flex-start;
+            text-align: center;
+
+        }
+
+        @media only screen and (max-width: $wp-admin-bar){
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 0rem 5rem;
+
+        }
+
+        @media only screen and (max-width: $phone-landscape){
+            
+            padding: 0 3rem;
+        }
+
+        @media only screen and (max-width: 550px){
+            padding: 0 1rem;
+        }
+
         .hero-container{
             .disclaimer{
                 font-size: 10px;
@@ -16,27 +39,58 @@ main{
                 font-size: $heading;
                 @include text;
                 text-transform: capitalize;
+                font-family: $heading;
+
+                @media only screen and (max-width: $phone-landscape){
+                    font-size: $large;
+                }
             }
+
+            
             p{
                 font-size: $standard;
                 color: $blue;
                 @include text;
+                font-family: $body;
             }
 
             form{
                 display: flex;
                 align-items: center;
                 margin-top: 2rem;
+
+                @media only screen and (max-width: $tablet-landscape) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: unset;
+
+                }
+
+                @media only screen and (max-width: $wp-admin-bar){
+                    margin-top: 0;
+                }
                
 
                 .fields{
                     margin-right: 10px;
 
+                    @media only screen and (max-width: $tablet-landscape) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+    
+                    }
+
+                    @media only screen and (max-width: $phone-landscape){
+                        margin-bottom: 1rem;
+                    }
+
                     input[type="text"],
                     input[type="email"]{
                         width: 100%;
-                        font-size: $standard;
-                        padding: 6px;
+                        font-size: $tiny;
+                        padding: 8px;
+                        font-family: $body;
+                        @include text;
                        
                     }
                     input[type="text"]:hover,
@@ -56,16 +110,26 @@ main{
                 p{
                     margin-bottom: 0;
                     margin-top: 0;
+                    @include text;
+
                 }
                 
 
                 input[type="submit"]{
-                    padding: 9px 40px;
-                    font-size: $standard;
+                    padding: 8px 40px;
+                    font-size: $tiny;
                     width: 100%;
                     background-color: $yellow;
                     border-color: $yellow;
                     color: $white;
+                    font-family: $body;
+                    @include text;
+
+                    @media only screen and (max-width: $tablet-landscape) {
+                        width: 100%;
+                        padding: 11px 116px;
+    
+                    }
                 }
                 input[type="submit"]:hover,
                 input[type="submit"]:active,
@@ -79,17 +143,100 @@ main{
                     display: flex;
                     align-items: center;
                     width: 33.33%;
+                    font-family: $body;
+                    @include text;
+
+                    @media only screen and (max-width: $tablet-landscape) {
+                        width: 100%;
+                        display: block;
+                       
+    
+                    }
                 }
 
                 
             }
         }
 
+        .image-container{
+            img{
+                animation: float 6s ease-in-out infinite;
+
+
+            }
+            
+        }
         .content{
             width: 50%;
             margin: 3rem;
+
+            @media only screen and (max-width: $tablet-landscape) {
+                margin: 1rem;
+                width: 75%;
+
+                img{
+                    padding: 1rem;
+                }
+                
+
+
+            }
+
+            @media only screen and (max-width: $wp-admin-bar){
+                display: flex;
+                flex-direction: column;
+                margin-top: 3rem;
+                width: 100%;
+                align-items: center;
+                padding: 0;
+                margin: 3rem 0;
+
+
+                img{
+                    padding: 2rem;
+                    width: 50%;
+                    padding: 0;
+
+                   
+
+                    @media only screen and (max-width: $phone-landscape){
+                        width: 100%;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: $tablet-landscape){
+                margin-top: 0;
+            }
+
+            @media only screen and (max-width: $phone-landscape){
+                margin: 3rem 0 1rem 0;
+                width: 80%;
+            }
+
+            @media only screen and (max-width: 550px){
+               
+                margin: 2rem 0 0 0;
+                padding: 0;
+            }
         }
     }
 
     
+}
+
+div.wpcf7 .ajax-loader{
+    display: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }

@@ -62,6 +62,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "typography/typography";
 
+@font-face {
+	font-family: 'Jost', sans-serif;
+	src: url(/wp-content/themes/upply/Fonts/Jost-Regular.woff);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Prata', serif;
+	src: url(/wp-content/themes/upply/Fonts/Prata-Regular.woff);
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: 'Bree Serif', serif;
+	src: url(https://fonts.googleapis.com/css?family=Bree+Serif&display=swap);
+	font-weight: normal;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/

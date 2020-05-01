@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<img src="<?php the_field('logo') ?>" alt="Upply.io logo">
-			<p>&copy; 2020 - <?php echo date('Y'); ?> Upply.io | All Rights Reserved</p>
+			<p>&copy; 2018 - <?php echo date('Y'); ?> Upply.io | All Rights Reserved</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
